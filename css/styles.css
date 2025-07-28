@@ -1,0 +1,199 @@
+/* Reset básico e configurações globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px 40px;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Estilos das telas */
+.screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #4a47a3;
+}
+
+.description {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Estilos para botões e inputs */
+.input-name {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s;
+}
+
+.input-name:focus {
+    outline: none;
+    border-color: #706fd3;
+}
+
+.btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #706fd3;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #4a47a3;
+    transform: translateY(-2px);
+}
+
+/* Estilos da tela do jogo */
+.game-header {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.info-box {
+    background-color: #f1f1f1;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.info-box span:first-child {
+    display: block;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.target-color-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#target-color {
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+#game-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+}
+
+.color-square {
+    width: 100%;
+    padding-bottom: 100%; /* Truque para manter o aspect-ratio 1:1 */
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 3px solid transparent;
+}
+
+.color-square:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos da tela final */
+.final-score {
+    font-size: 1.5rem;
+    font-weight: 600;
+    background-color: #eaf0f9;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.final-score span:first-child {
+    display: block;
+    font-size: 1rem;
+    color: #666;
+}
+
+#player-name-final {
+    color: #706fd3;
+    font-weight: 700;
+}
+
+/* Estilos do Ranking */
+.ranking-container {
+    width: 100%;
+    margin-top: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.ranking-container h2 {
+    margin-bottom: 15px;
+    color: #4a47a3;
+}
+
+.ranking-container ol {
+    list-style-position: inside;
+    padding: 0;
+    text-align: left;
+}
+
+.ranking-container li {
+    padding: 8px 10px;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #eee;
+    font-weight: 600;
+}
+
+.ranking-container li:last-child {
+    border-bottom: none;
+}
+
+.ranking-container li::marker {
+    font-weight: 700;
+    color: #706fd3;
+}

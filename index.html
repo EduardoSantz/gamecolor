@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio das Cores</title>
+    <!-- Google Fonts para um visual mais moderno -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Link para o arquivo CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Tela Inicial -->
+        <div id="start-screen" class="screen active">
+            <h1 class="title">Desafio das Cores</h1>
+            <p class="description">Digite seu nome e clique em jogar para testar seus reflexos!</p>
+            <input type="text" id="player-name-input" placeholder="Seu nome" class="input-name">
+            <button id="start-button" class="btn">Jogar</button>
+            <div class="ranking-container">
+                <h2>🏆 Ranking</h2>
+                <ol id="ranking-list-start"></ol>
+            </div>
+        </div>
+
+        <!-- Tela do Jogo -->
+        <div id="game-screen" class="screen hidden">
+            <div class="game-header">
+                <div class="info-box">
+                    <span>Pontuação</span>
+                    <span id="score">0</span>
+                </div>
+                <div class="info-box">
+                    <span>Tempo</span>
+                    <span id="timer">60</span>
+                </div>
+            </div>
+            <h2 class="target-color-text">Clique na cor: <span id="target-color"></span></h2>
+            <div id="game-grid">
+                <!-- Os quadrados coloridos serão gerados aqui via JS -->
+            </div>
+        </div>
+
+        <!-- Tela de Fim de Jogo -->
+        <div id="end-screen" class="screen hidden">
+            <h1 class="title">Fim de Jogo!</h1>
+            <p class="description">Parabéns, <span id="player-name-final"></span>!</p>
+            <div class="final-score">
+                <span>Sua pontuação final foi:</span>
+                <span id="final-score">0</span>
+            </div>
+            <button id="restart-button" class="btn">Jogar Novamente</button>
+            <div class="ranking-container">
+                <h2>🏆 Ranking Atualizado</h2>
+                <ol id="ranking-list-end"></ol>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link para o arquivo JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
